@@ -91,15 +91,15 @@
 						<div class="col-md-6 w3-icon-grid1">
 							<i class="fas fa-paint-brush"></i>
 							<div class="Supp">
-								<h3>On demand Learning</h3>
-								<p>Access 1000's of course anytime, anywhere</p>
+								<h3>One Click Appication</h3>
+								<p>Create your profile and simply participate for event by once click</p>
 							</div>
 						</div>
 						<div class="col-md-6 w3-icon-grid1">
 							<i class="fas fa-book"></i>
 							<div class="Supp">
-								<h3>Study Material</h3>
-								<p>Personalized Study material by Tutors.</p>
+								<h3>Follow Ups</h3>
+								<p>Get Status of your application throughout the screening steps.</p>
 							</div>
 						</div>
 					</div>
@@ -107,14 +107,14 @@
 						<div class="col-md-6 w3-icon-grid1">
 							<i class="fas fa-user"></i>
 							<div class="Supp">
-								<h3>Qualified Teachers</h3>
-								<p>Study with the qualified teachers</p>
+								<h3>Profile Builder</h3>
+								<p>Customize your profile on your website to improve application</p>
 							</div>
 						</div>
 						<div class="col-md-6 w3-icon-grid1">
 							<i class="fas fa-comments"></i>
 							<div class="Supp">
-								<h3>Forum Support</h3>
+								<h3>Chat Support</h3>
 								<p>Get to chat with your colleagues over various topic discussion</p>
 							</div>
 							
@@ -141,7 +141,7 @@
 	<div class="container">
 		<div class="wthree_head_section">
 				<h3 class="w3l_header">Organizers Section</h3>
-				<p>Become a tutor, Discover your potential!</p>
+				<p>Become a organizer, Improve your tasks of Screening!</p>
 			</div>
 			
 			<div class="row about-info-grids">
