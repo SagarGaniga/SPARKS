@@ -17,7 +17,7 @@ class Organizers extends Authenticatable
      */
     
     protected $table='organizers';
-    
+    protected $guard = 'organizers';
     protected $fillable = [
         'name', 'email', 'password',
     ];

@@ -34,12 +34,26 @@ class UserLoggedIn
     public function handle(Login $event)
     {
         // Session::put('id', Auth::user()->id);
-        Session::put('message', "Hello"); 
+        Session::put('message', "Welcome"); 
 
-        app('request')->session()->put('id', Auth::user()->id);
-        app('request')->session()->put('name', Auth::user()->name);
-        app('request')->session()->put('email', Auth::user()->email);
-            
+        if(!empty(Auth::user()->id))
+        {
+            app('request')->session()->regenerate(true);
+            Session::put('message', "Im User"); 
+            app('request')->session()->put('user_id', Auth::user()->name);
+            app('request')->session()->put('email_id', Auth::user()->name);
+            app('request')->session()->put('user_name', Auth::user()->name);
+        }
+        elseif(!empty(Auth::organizers()->id))
+        {
+            app('request')->session()->regenerate(true);
+            Session::put('message', "Im organizers"); 
+            app('request')->session()->put('user_id', Auth::guard('organizers')->user()->id);
+            app('request')->session()->put('email_id', Auth::guard('organizers')->user()->email);
+            app('request')->session()->put('user_name', Auth::guard('organizers')->user()->name);
+            // $result = app('App\Http\Controllers\Admin\PriviledgeController')->getByUsername();
+            // app('request')->session()->put('success', $result); 
+        }
         
         
     }

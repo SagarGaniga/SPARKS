@@ -199,7 +199,7 @@
                             <li><a href="javascript:void(0);"><i class="material-icons">shopping_cart</i>Sales</a></li>
                             <li><a href="javascript:void(0);"><i class="material-icons">favorite</i>Likes</a></li>
                             <li role="separator" class="divider"></li>
-                            <li><a href="javascript:void(0);"><i class="material-icons">input</i>Sign Out</a></li>
+                            <li><a href="/logoutuser"><i class="material-icons">input</i>Sign Out</a></li>
                             <li class="footer">
                                 <a href="javascript:void(0);">View All Tasks</a>
                             </li>

@@ -71,6 +71,7 @@ class RegisterController extends Controller
     }
     public function showRegistrationForm()
     {
-        return view('organizersauth.register');
+        return view('userauth.register');
     } 
+
 }
