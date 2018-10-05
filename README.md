@@ -1,2 +1,2 @@
-# KJ-SPARKS
-KJ hackathon
+# KJHack
+Project for KJSCE hackathon
