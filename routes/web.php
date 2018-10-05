@@ -22,3 +22,21 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/session', 'NoauthController@accessSessionData');
+
+
+Route::group( [ 'prefix' => '/organizers', 'middlewareGroups' => 'web'], function()
+{
+	Route::get('/', function () {
+	    echo "Hello";
+	});
+	Route::get('/login','OrganizersAuth\LoginController@showLoginForm');
+	Route::post('/login','OrganizersAuth\LoginController@login');
+	Route::get('/logout','OrganizersAuth\LoginController@logout');
+
+	// Registration Routes...
+	Route::get('/register', 'OrganizersAuth\RegisterController@showRegistrationForm');
+	Route::post('/register', 'OrganizersAuth\RegisterController@register');
+
+
+	Route::get('/admin', 'AdminController@index');
+});

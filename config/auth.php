@@ -45,6 +45,14 @@ return [
             'driver' => 'token',
             'provider' => 'users',
         ],
+        'user' => [
+            'driver' => 'session',
+            'provider' => 'users'
+        ],
+        'organizers' => [
+            'driver' => 'session',
+            'provider' => 'organizers'
+        ],
     ],
 
     /*
@@ -69,6 +77,10 @@ return [
             'driver' => 'eloquent',
             'model' => App\User::class,
         ],
+        'organizers' => [
+            'driver' => 'eloquent',
+            'model' => App\Organizers::class,
+        ]
 
         // 'users' => [
         //     'driver' => 'database',
@@ -97,6 +109,13 @@ return [
             'table' => 'password_resets',
             'expire' => 60,
         ],
+        'organizers' => [
+            'provider' => 'organizers',
+            'email' => 'organizers.auth.emails.password',
+            'table' => 'password_resets',
+            'expire' => 60,
+        ],
+
     ],
 
 ];
