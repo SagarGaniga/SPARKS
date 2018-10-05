@@ -26,6 +26,8 @@ class HomeController extends Controller
     public function index()
     {
         // echo "string";
-        return view('home');
+        $events = Events::all();
+        return view("home")->with("events", $events);
+        // return view('home');
     }
 }
