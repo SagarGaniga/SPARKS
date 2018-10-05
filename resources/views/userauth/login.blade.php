@@ -3,15 +3,14 @@
 <body class="login-page">
     <div class="login-box">
         <div class="logo">
-            <a href="javascript:void(0);">Organizers</a>
+            <a href="javascript:void(0);">Participant</a>
             <small>Login</small>
         </div>
         <div class="card">
             <div class="body">
-                <form id="sign_in" method="POST" action="/organizers/login">
-                    
+                <form id="sign_in" method="POST" action="/login">
+                    @csrf
                     <div class="msg">Sign in to start your session</div>
-
                     <div class="input-group">
                         <span class="input-group-addon">
                             <i class="material-icons">person</i>
@@ -39,7 +38,7 @@
                     </div>
                     <div class="row m-t-15 m-b--20">
                         <div class="col-xs-6">
-                            <a href="/organizers/register">Register Now!</a>
+                            <a href="/register">Register Now!</a>
                         </div>
                         <div class="col-xs-6 align-right">
                             <a href="#">Forgot Password?</a>

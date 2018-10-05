@@ -34,20 +34,19 @@ class UserLoggedIn
     public function handle(Login $event)
     {
         // Session::put('id', Auth::user()->id);
-        
+        Session::put('message', "Welcome"); 
 
-        if(!empty(Auth::guard('user')))
+        if(!empty(Auth::user()->id))
         {
-            Session::set('configuration', NULL);
             app('request')->session()->regenerate(true);
             Session::put('message', "Im User"); 
-            app('request')->session()->put('user_id', Auth::guard('user')->user()->id);
-            app('request')->session()->put('email_id', Auth::guard('user')->user()->email);
-            app('request')->session()->put('user_name', Auth::guard('user')->user()->name);
+            app('request')->session()->put('user_id', Auth::user()->name);
+            app('request')->session()->put('email_id', Auth::user()->name);
+            app('request')->session()->put('user_name', Auth::user()->name);
         }
-        elseif(!empty(Auth::guard('organizers')))
+        elseif(!empty(Auth::organizers()->id))
         {
-
+            app('request')->session()->regenerate(true);
             Session::put('message', "Im organizers"); 
             app('request')->session()->put('user_id', Auth::guard('organizers')->user()->id);
             app('request')->session()->put('email_id', Auth::guard('organizers')->user()->email);

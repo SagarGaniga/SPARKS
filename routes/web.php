@@ -19,16 +19,14 @@ Route::get('/theme', function () {
 });
 
 Auth::routes();
-
+Route::get('/user/home', 'HomeController@index')->name('home');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/session', 'NoauthController@accessSessionData');
-
+Route::get('/logoutuser','Auth\LoginController@logout');
 
 Route::group( [ 'prefix' => '/organizers', 'middlewareGroups' => 'web'], function()
 {
-	Route::get('/', function () {
-	    echo "Hello";
-	});
+	Route::get('/', 'OrganizersController@index');
 	Route::get('/login','OrganizersAuth\LoginController@showLoginForm');
 	Route::post('/login','OrganizersAuth\LoginController@login');
 	Route::get('/logout','OrganizersAuth\LoginController@logout');
