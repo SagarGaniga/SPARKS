@@ -16,8 +16,12 @@ class Organizers extends Authenticatable
      * @var array
      */
     
-    protected $table='organizers';
+    // protected $table='organizers';
+    protected $table = 'organizers';
+    protected $primaryKey='id';
+    public $timestamps=false;
     protected $guard = 'organizers';
+
     protected $fillable = [
         'name', 'email', 'password',
     ];
@@ -28,6 +32,6 @@ class Organizers extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token',
+        'password',
     ];
 }

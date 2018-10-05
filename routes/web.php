@@ -30,7 +30,7 @@ Route::group( [ 'prefix' => '/organizers'], function()
 {
 	Route::get('/', 'OrganizersController@index');
 	Route::get('/login','OrganizersAuth\LoginController@showLoginForm');
-	Route::post('/login','OrganizersAuth\LoginController@login');
+	Route::post('/login','OrganizersAuth\LoginController@organizersLogin');
 	Route::get('/logout','OrganizersAuth\LoginController@logout');
 
 	// Registration Routes...

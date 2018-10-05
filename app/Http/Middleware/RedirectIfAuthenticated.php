@@ -23,12 +23,18 @@ class RedirectIfAuthenticated
 
     //     return $next($request);
     // }
-    public function handle($request, Closure $next, $guard = 'users')
-    {
-        if (!Auth::guard($guard)->check()) {
-            return redirect('/');
-        }
+    public function handle($request, Closure $next, $guard = null)
+        {
+            if ($guard == "users" && Auth::guard($guard)->check()) {
+                return redirect('/userHome');
+            }
+            if ($guard == "organizers" && Auth::guard($guard)->check()) {
+                return redirect('/organizers');
+            }
+            if (Auth::guard($guard)->check()) {
+                return redirect('/');
+            }
 
-        return $next($request);
-    }
+            return $next($request);
+        }
 }

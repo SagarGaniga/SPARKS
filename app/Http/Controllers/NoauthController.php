@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Auth;
 
 class NoauthController extends Controller
 {
@@ -10,9 +11,11 @@ class NoauthController extends Controller
     	
   
     		$data = $request->session()->all();
-    		echo "<pre>";print_r($data);exit();
-    		
-			
+    		echo "<pre>";print_r($data);
+    		echo "string";
+    		print_r(Auth::guard('organizers')->user());
+			print_r(Auth::user());
+			// print_r(Auth::guard('users')->user());
     	
     }
 
