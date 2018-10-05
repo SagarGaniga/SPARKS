@@ -13,7 +13,7 @@ class OrganizersController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('organizers');
+        // $this->middleware('organizers');
         $this->middleware('preventBackHistory');
     }
 

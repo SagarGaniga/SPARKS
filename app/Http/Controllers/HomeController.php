@@ -14,8 +14,8 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        // $this->middleware('auth');
-        // $this->middleware('preventBackHistory');
+        // $this->middleware('users');
+        $this->middleware('preventBackHistory');
     }
 
     /**
@@ -25,7 +25,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $events = Events::all();
-        return view("home")->with("events", $events);
+        // echo "string";
+        return view('home');
     }
 }
