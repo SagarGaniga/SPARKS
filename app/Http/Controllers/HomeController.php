@@ -43,7 +43,7 @@ class HomeController extends Controller
         if (LinkedIn::isAuthenticated()) {
              //we know that the user is authenticated now. Start query the API
 
-             $user=LinkedIn::get('/v2/me');
+             $user=LinkedIn::get('v1/people/~:(firstName,num-connections,picture-url,summary,specialties,positions)');
              echo "<pre>";
              print_r($user);
              exit();
