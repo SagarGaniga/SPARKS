@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zxx">
    <head>
-      <title>KJHacks</title>
+      <title>Ease</title>
       <!-- Meta Tags -->
 	 <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
@@ -41,8 +41,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="header-bar">
 				<div class="container">
 				<nav class="navbar navbar-expand-lg navbar-light">
-               <div class="hedder-up">
-               <h1><a class="navbar-brand" href="#">KJHacks</a></h1>
+               <div class="header-up">
+               <h1><a class="navbar-brand" href="#">Ease</a></h1>
 			   </div>
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                <span class="navbar-toggler-icon"></span>

@@ -8,7 +8,7 @@
 				<ul class="rslides" id="slider" style="height: 130%">
 					<li>
 						<div class="agile_banner_text_info">
-							<h3>Making Events Easy</h3>
+							<h3>Event Automated Screening with Ease</h3>
 							<p>EASE provides a universal platform for participants and the event organizers to collaborate for various events together, by easing the job for both the parties</p>
 							<br>
 							<a href="#intro">
@@ -17,7 +17,7 @@
 					</li>
 					<li>
 						<div class="agile_banner_text_info">
-							<h3>Making Events Easy</h3>
+							<h3>Event Automated Screening with Ease</h3>
 							<p>EASE provides a universal platform for participants and the event organizers to collaborate for various events together, by easing the job for both the parties.</p>
 							<br>
 							<a href="#intro">
@@ -52,7 +52,7 @@
 									<div class="grid1"style="height: 400px;width: 400px">
 										<img src="../../images/student.png" style="height: 200px;width: 200px">
 										<h4>Organizer</h4>
-										<h6>A place to call for participants in your event</h6>
+										<h6>A place for screening participants in your event</h6>
 									</div>
 								</a>
 							</div>
@@ -62,7 +62,7 @@
 										
 										<img src="../../images/tutor.png" style="height: 200px;width: 200px">
 										<h4>Participant</h4>
-										<h6>Collaborate with top organizers for partipants</h6>
+										<h6>Collaborate with top organizers for partipating</h6>
 									</div>
 								</a>
 							</div>
@@ -114,8 +114,8 @@
 						<div class="col-md-6 w3-icon-grid1">
 							<i class="fas fa-comments"></i>
 							<div class="Supp">
-								<h3>Chat Support</h3>
-								<p>Get to chat with your colleagues over various topic discussion</p>
+								<h3>Ranking Support</h3>
+								<p>Know where you stand among the other candidates</p>
 							</div>
 							
 						</div>
@@ -208,8 +208,7 @@
 							<div class="col-md-6 test-grid">
 								<div class="test-grid1-agileinfo hrms">
 									<img src="images/ts1.jpg" alt="" class="img-r">
-									<p>I like the precision of the instructor's trading strategies, which is also reflected in his teaching style. He's obviously passionate about the subject, well informed, focused, and diligent. 
-									He clearly expresses his techniques, strategies, and the software platform he uses. An excellent course thus far, I intend to open my first live Forex account due to what I've been learning here. Thank you, Kirill, for sharing your enthusiasm!</p>
+									<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore animi quae pariatur odio dolorem! Ut vitae laborum sed ullam? Voluptatum dolore ipsum perspiciatis! Nihil impedit doloremque architecto optio, aut velit iusto iste cum obcaecati unde dolorum deserunt deleniti incidunt fuga, facilis aliquid perferendis sunt veniam veritatis nisi. Laudantium, culpa ipsum obcaecati quos dolores quo repudiandae mollitia aliquid, optio sed molestiae quisquam ullam? Animi aliquam impedit velit expedita reiciendis quaerat fugit possimus facere nobis nam minus consequuntur dolore, facilis in officiis tempore laudantium, perferendis ratione quod quos quo deserunt?</p>
 									<h4>Shane Watson</h4>
 									<span>Student</span>
 								</div>
@@ -217,8 +216,7 @@
 							<div class="col-md-6 test-grid">
 								<div class="test-grid1-agileinfo">
 									<img src="images/ts2.jpg" alt="" class="img-r">
-									<p>This course is just amazing. Its exactly what I was looking for. If you know a very little bit basics of Python, that will definitely 
-									be awesome for you to follow this course. The code and concepts are explained very slowly and perfectly. Anyone interested in learning Deep Learning should definitely take this course. And for this Machine Learning course is not required to do before. So it deserves 5 stars :)</p>
+									<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore animi quae pariatur odio dolorem! Ut vitae laborum sed ullam? Voluptatum dolore ipsum perspiciatis! Nihil impedit doloremque architecto optio, aut velit iusto iste cum obcaecati unde dolorum deserunt deleniti incidunt fuga, facilis aliquid perferendis sunt veniam veritatis nisi. Laudantium, culpa ipsum obcaecati quos dolores quo repudiandae mollitia aliquid, optio sed molestiae quisquam ullam? Animi aliquam impedit velit expedita reiciendis quaerat fugit possimus facere nobis nam minus consequuntur dolore.</p>
 									<h4>Mitchel Starc</h4>
 									<span>Student</span>
 								</div>
@@ -228,18 +226,18 @@
 							<div class="col-md-6 test-grid">
 								<div class="test-grid1-agileinfo hrms">
 									<img src="images/ts3.jpg" alt="" class="img-r">
-									<p>Launching my first course on StudyLink allowed me to quit my full-time job and start my own company. I went from working 60+ hour weeks to setting my own hours and schedule being passionate about the subject, focused, and diligent.</p>
+									<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum explicabo consequatur aperiam architecto qui laudantium odio distinctio porro neque repellendus eveniet, doloribus aliquam aliquid, natus et laborum dolorum sunt ratione!</p>
 									<h4>Steve Smith</h4>
-									<span>Tutor</span>
+									<span>Organizer</span>
 		
 								</div>
 							</div>
 							<div class="col-md-6 test-grid">
 								<div class="test-grid1-agileinfo">
 									<img src="images/ts1.jpg" alt="" class="img-r">
-									<p>There's no greater success on the StudyLink marketplace than hearing that you've helped a student achieve their goals. Teaching on StudyLink has brought me new relationships from wonderful and insatiably curious students.</p>
+									<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum explicabo consequatur aperiam architecto qui laudantium odio distinctio porro neque repellendus eveniet, doloribus aliquam aliquid, natus et laborum dolorum sunt ratione!</p>
 									<h4>James Franklin</h4>
-									<span>Tutor</span.>
+									<span>Organizer</span.>
 								</div>
 							</div>
 						</div>
