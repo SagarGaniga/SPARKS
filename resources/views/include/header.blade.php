@@ -14,22 +14,22 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
 
     <!-- Bootstrap Core Css -->
-    <link href = "{{ URL::asset('plugins/bootstrap/css/bootstrap.css')}}" rel="stylesheet">
+    <link href = "{{ URL::asset('../../plugins/bootstrap/css/bootstrap.css')}}" rel="stylesheet">
 
     <!-- Waves Effect Css -->
-    <link href="{{URL::asset('plugins/node-waves/waves.css')}}" rel="stylesheet" />
+    <link href="{{URL::asset('../../plugins/node-waves/waves.css')}}" rel="stylesheet" />
 
     <!-- Animation Css -->
-    <link href="{{URL::asset('plugins/animate-css/animate.css')}}" rel="stylesheet" />
+    <link href="{{URL::asset('../../plugins/animate-css/animate.css')}}" rel="stylesheet" />
 
     <!-- Morris Chart Css-->
-    <link href="{{ URL::asset('plugins/morrisjs/morris.css') }}" rel="stylesheet" />
+    <link href="{{ URL::asset('../../plugins/morrisjs/morris.css') }}" rel="stylesheet" />
 
     <!-- Custom Css -->
-    <link href="{{ URL::asset('css/style.css') }}" rel="stylesheet">
+    <link href="{{ URL::asset('../../css/style.css') }}" rel="stylesheet">
 
     <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
-    <link href="{{URL::asset('css/themes/all-themes.css')}}" rel="stylesheet" />
+    <link href="{{URL::asset('../../css/themes/all-themes.css')}}" rel="stylesheet" />
 </head>
 <body class="theme-indigo">
     <!-- Page Loader -->

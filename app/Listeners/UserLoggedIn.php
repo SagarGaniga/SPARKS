@@ -40,17 +40,17 @@ class UserLoggedIn
         {
             app('request')->session()->regenerate(true);
             Session::put('message', "Im User"); 
-            app('request')->session()->put('user_id', Auth::user()->id);
-            app('request')->session()->put('email_id', Auth::user()->name);
-            app('request')->session()->put('user_name', Auth::user()->email);
+            app('request')->session()->put('id', Auth::user()->id);
+            app('request')->session()->put('email', Auth::user()->name);
+            app('request')->session()->put('name', Auth::user()->email);
         }
-        elseif(!empty(Auth::user()->id))
+        elseif(!empty(Auth::guard('organizers')->user()))
         {
             app('request')->session()->regenerate(true);
             Session::put('message', "Im organizers"); 
-            app('request')->session()->put('user_id', Auth::user()->id);
-            app('request')->session()->put('email_id', Auth::user()->name);
-            app('request')->session()->put('user_name', Auth::user()->email);
+            app('request')->session()->put('id',Auth::guard('organizers')->user()->id);
+            app('request')->session()->put('email', Auth::guard('organizers')->user()->name);
+            app('request')->session()->put('name', Auth::guard('organizers')->user()->email);
             // $result = app('App\Http\Controllers\Admin\PriviledgeController')->getByUsername();
             // app('request')->session()->put('success', $result); 
         }

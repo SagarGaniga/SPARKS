@@ -1,4 +1,4 @@
-{{-- @include('include.authheader')
+@include('include.authheader')
 
 <body class="login-page">
     <div class="login-box">
@@ -67,8 +67,8 @@
     <script src="../../js/pages/examples/sign-in.js"></script>
 </body>
 
-@include('include.authfooter') --}}
-
+@include('include.authfooter')
+{{-- 
 @extends('layouts.app')
 
 @section('content')
@@ -140,3 +140,4 @@
     </div>
 </div>
 @endsection
+ --}}

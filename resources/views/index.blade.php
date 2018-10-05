@@ -8,8 +8,8 @@
 				<ul class="rslides" id="slider" style="height: 130%">
 					<li>
 						<div class="agile_banner_text_info">
-							<h3>Empowering Education System </h3>
-							<p>StudyLink provides universal access to the world’s best education, partnering with top universities and organizations to offer courses online.</p>
+							<h3>Making Events Easy</h3>
+							<p>EASE provides a universal platform for participants and the event organizers to collaborate for various events together, by easing the job for both the parties</p>
 							<br>
 							<a href="#intro">
 							<button class="btn btn-info btn-lg" style="border-radius: 50px;width: 200px;">Let's Start</button></a>
@@ -17,8 +17,8 @@
 					</li>
 					<li>
 						<div class="agile_banner_text_info">
-							<h3>Empowering Education System </h3>
-							<p>StudyLink provides universal access to the world’s best education, partnering with top universities and organizations to offer courses online.</p>
+							<h3>Making Events Easy</h3>
+							<p>EASE provides a universal platform for participants and the event organizers to collaborate for various events together, by easing the job for both the parties.</p>
 							<br>
 							<a href="#intro">
 							<button class="btn btn-info btn-lg" style="border-radius: 50px;width: 200px;">Let's Start</button></a>
