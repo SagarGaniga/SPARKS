@@ -13,7 +13,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        // $this->middleware('users');
         $this->middleware('preventBackHistory');
     }
 
@@ -24,6 +24,7 @@ class HomeController extends Controller
      */
     public function index()
     {
+        // echo "string";
         return view('home');
     }
 }

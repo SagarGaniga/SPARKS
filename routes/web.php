@@ -24,7 +24,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/session', 'NoauthController@accessSessionData');
 Route::get('/logoutuser','Auth\LoginController@logout');
 
-Route::group( [ 'prefix' => '/organizers', 'middlewareGroups' => 'web'], function()
+Route::group( [ 'prefix' => '/organizers'], function()
 {
 	Route::get('/', 'OrganizersController@index');
 	Route::get('/login','OrganizersAuth\LoginController@showLoginForm');
@@ -36,5 +36,5 @@ Route::group( [ 'prefix' => '/organizers', 'middlewareGroups' => 'web'], functio
 	Route::post('/register', 'OrganizersAuth\RegisterController@register');
 
 
-	Route::get('/admin', 'AdminController@index');
+
 });

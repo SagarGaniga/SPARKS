@@ -62,6 +62,7 @@ class Kernel extends HttpKernel
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
         'preventBackHistory' => \App\Http\Middleware\PreventBackHistory::class,
         'organizers' => \App\Http\Middleware\RedirectIfNotOrganizers::class,
+        'users' => \App\Http\Middleware\RedirectIfAuthenticated::class,
 
     ];
 }
