@@ -52,7 +52,7 @@
 									<div class="grid1"style="height: 400px;width: 400px">
 										<img src="../../images/student.png" style="height: 200px;width: 200px">
 										<h4>Organizer</h4>
-										<h6>A place where you get exceptional opportunities</h6>
+										<h6>A place to call for participants in your event</h6>
 									</div>
 								</a>
 							</div>
@@ -62,7 +62,7 @@
 										
 										<img src="../../images/tutor.png" style="height: 200px;width: 200px">
 										<h4>Participant</h4>
-										<h6>Gain the unknown knowledge</h6>
+										<h6>Collaborate with top organizers for partipants</h6>
 									</div>
 								</a>
 							</div>
@@ -123,7 +123,7 @@
 					<div class="row w3-icon-grid-gap1">
 						<div class="row" style="text-align: center; padding-left: 15%">
 							<a href="/login">
-							<button class="btn btn-info btn-lg" style="border-radius: 50px;width: 200px;margin-right: 20px">Login</button></a>
+							<button class="btn btn-info btn-lg" style="border-radius: 50px;width: 200px;margin-right: 4px">Login</button></a>
 							<a href="/register">
 							<button class="btn btn-info btn-lg" style="border-radius: 50px;width: 200px;">Register</button></a>
 						</div>
