@@ -26,7 +26,6 @@ class LoginController extends Controller
      * @var string
      */
     protected $redirectTo = '/organizers';
-    protected $guard = 'organizers';
 
 
     /**
@@ -41,5 +40,9 @@ class LoginController extends Controller
     public function showLoginForm()
     {
         return view('organizersauth.login');
+    }
+    public function login()
+    {
+        return redirect('/organizers');
     }
 }

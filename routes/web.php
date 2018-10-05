@@ -17,11 +17,13 @@ Route::get('/', function () {
 Route::get('/theme', function () {
     return view('theme');
 });
+Route::get('/session', 'NoauthController@accessSessionData');
+
+
+// Route::get('/user/home', 'HomeController@index')->name('home');
 
 Auth::routes();
-// Route::get('/user/home', 'HomeController@index')->name('home');
-Route::get('/userHome', 'HomeController@index')->name('home');
-Route::get('/session', 'NoauthController@accessSessionData');
+Route::get('/userHome', 'HomeController@index');
 Route::get('/logoutuser','Auth\LoginController@logout');
 
 Route::group( [ 'prefix' => '/organizers'], function()
