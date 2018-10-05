@@ -27,6 +27,8 @@ Route::get('/userHome', 'HomeController@index');
 Route::get('/user/home/2', 'HomeController@index');
 Route::get('/logoutuser','Auth\LoginController@logout');
 
+Route::get('/updateprojintern/{userid}', 'UsersController@updateInternProj');
+
 Route::group( [ 'prefix' => '/organizers'], function()
 {
 	Route::get('/', 'OrganizersController@index');
