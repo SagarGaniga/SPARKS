@@ -19,8 +19,8 @@ Route::get('/theme', function () {
 });
 
 Auth::routes();
-Route::get('/user/home', 'HomeController@index')->name('home');
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/user/home', 'HomeController@index')->name('home');
+Route::get('/userHome', 'HomeController@index')->name('home');
 Route::get('/session', 'NoauthController@accessSessionData');
 Route::get('/logoutuser','Auth\LoginController@logout');
 
