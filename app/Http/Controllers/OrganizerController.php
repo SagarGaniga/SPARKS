@@ -8,7 +8,7 @@ use App\Events;
 use App\User;
 use Session;
 
-class HomeController extends Controller
+class OrganizerController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -28,9 +28,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        // echo "string";
-        $events = Events::all();
-        return view("home")->with("events", $events);
+        
+        $events = Events::where('organizer_id','=',session('id'))->get();
+        return view("organizersHome")->with("events", $events);
         // return view('home');
     }
 
@@ -70,4 +70,12 @@ class HomeController extends Controller
         echo "<div class='container'><a href='$url'>Login with LinkedIn</a></div>";
         exit();
     }
+
+
+
+    public function viewParticipants($id)
+    {
+        return view('organizers.event');
+    }
+
 }

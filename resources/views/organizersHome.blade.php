@@ -13,7 +13,7 @@
                     <div class="card">
                         <div class="header">
                             <h2>
-                                Events in which you can register!
+                                Your Events!
                                 <small>Hackathons, Programming Challenges and Coding Competitions</small>
                             </h2>
                             <ul class="header-dropdown m-r--5">
@@ -43,8 +43,9 @@
                                                 </p></a>
                                                 <p>
                                                     <!-- Trigger the modal with a button -->
-                                                    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
-
+                                                    <a href="events/{{$event->id}}/participants">
+                                                    <button type="button" class="btn btn-info btn-lg">View Participants</button>
+                                                    </a>
                                                     <!-- Modal -->
                                                     <div class="modal fade" id="myModal" role="dialog">
                                                     <div class="modal-dialog">

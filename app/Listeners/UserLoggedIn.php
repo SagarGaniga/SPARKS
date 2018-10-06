@@ -11,6 +11,7 @@ use Auth;
 use Session;
 use App\Http\Controllers\Admin\PriviledgeController;
 
+
 class UserLoggedIn
 {
     /**
@@ -52,7 +53,9 @@ class UserLoggedIn
             app('request')->session()->put('email', Auth::guard('organizers')->user()->name);
             app('request')->session()->put('name', Auth::guard('organizers')->user()->email);
             // $result = app('App\Http\Controllers\Admin\PriviledgeController')->getByUsername();
-            // app('request')->session()->put('success', $result); 
+            // app('request')->session()->put('success', $result);
+            
+             
         }
         
         

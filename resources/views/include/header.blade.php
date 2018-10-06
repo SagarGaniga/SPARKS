@@ -14,22 +14,64 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
 
     <!-- Bootstrap Core Css -->
-    <link href = "{{ URL::asset('../../plugins/bootstrap/css/bootstrap.css')}}" rel="stylesheet">
+    <link href = "{{ URL::asset('../../../plugins/bootstrap/css/bootstrap.css')}}" rel="stylesheet">
 
     <!-- Waves Effect Css -->
-    <link href="{{URL::asset('../../plugins/node-waves/waves.css')}}" rel="stylesheet" />
+    <link href="{{URL::asset('../../../plugins/node-waves/waves.css')}}" rel="stylesheet" />
 
     <!-- Animation Css -->
-    <link href="{{URL::asset('../../plugins/animate-css/animate.css')}}" rel="stylesheet" />
+    <link href="{{URL::asset('../../../plugins/animate-css/animate.css')}}" rel="stylesheet" />
 
     <!-- Morris Chart Css-->
-    <link href="{{ URL::asset('../../plugins/morrisjs/morris.css') }}" rel="stylesheet" />
+    <link href="{{ URL::asset('../../../plugins/morrisjs/morris.css') }}" rel="stylesheet" />
+
+
+    <!-- JQuery DataTable Css -->
+    <link href="{{ URL::asset('../../../plugins/jquery-datatable/skin/bootstrap/css/dataTables.bootstrap.css') }}" rel="stylesheet">
+
 
     <!-- Custom Css -->
-    <link href="{{ URL::asset('../../css/style.css') }}" rel="stylesheet">
+    <link href="{{ URL::asset('../../../css/style.css') }}" rel="stylesheet">
 
     <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
-    <link href="{{URL::asset('../../css/themes/all-themes.css')}}" rel="stylesheet" />
+    <link href="{{URL::asset('../../../css/themes/all-themes.css')}}" rel="stylesheet" />
+
+  
+    
+    <!-- Colorpicker Css -->
+    <link href="{{URL::asset('../../../plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.css')}}" rel="stylesheet" />
+    
+
+    <!-- Dropzone Css -->
+    <link href="{{URL::asset('../../../plugins/dropzone/dropzone.css')}}" rel="stylesheet" />
+    
+
+    <!-- Multi Select Css -->
+    <link href="{{URL::asset('../../../plugins/multi-select/css/multi-select.css')}}" rel="stylesheet" />
+    
+
+    <!-- Bootstrap Spinner Css -->
+    <link href="{{URL::asset('../../../plugins/jquery-spinner/css/bootstrap-spinner.css')}}" rel="stylesheet" />
+    
+
+    <!-- Bootstrap Tagsinput Css -->
+    <link href="{{URL::asset('../../../plugins/bootstrap-tagsinput/bootstrap-tagsinput.css')}}" rel="stylesheet" />
+    
+
+    <!-- Bootstrap Select Css -->
+    <link href="{{URL::asset('../../../plugins/bootstrap-select/css/bootstrap-select.css')}}" rel="stylesheet" />
+
+
+    <!-- noUISlider Css -->
+    <link href="{{URL::asset('../../../plugins/nouislider/nouislider.min.css')}}" rel="stylesheet" />
+    
+
+
+
+    <script src="{{ URL::asset('../../../plugins/ckeditor/ckeditor.js')}}"></script>
+    <script>
+        CKEDITOR.replace( 'article-ckeditor' );
+    </script>
 </head>
 <body class="theme-indigo">
     <!-- Page Loader -->
@@ -263,7 +305,7 @@
                         </a>
                     </li>
                     <li class="active">
-                        <a href="/authuser">
+                        <a href="/userlinkedin">
                             <i class="material-icons">link</i>
                             <span>LinkedIn</span>
                         </a>

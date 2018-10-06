@@ -141,31 +141,31 @@
 	<div class="container">
 		<div class="wthree_head_section">
 				<h3 class="w3l_header">Organizers Section</h3>
-				<p>Become a organizer, Improve your tasks of Screening!</p>
+				<p>Host Events on Ease!</p>
 			</div>
 			
 			<div class="row about-info-grids">
 				<div class="col-md-4 about-info about-info1">
 					<i class="far fa-gem"></i>
-					<h4>Earn Money</h4>
+					<h4>Events</h4>
 					<div class="h4-underline"></div>
-					<p>Educate students and earn money.</p>
+					<p>Host Independent Events</p>
 				</div>
 				<div class="col-md-4 about-info about-info2">
 					<i class="fas fa-book"></i>
-					<h4>Give Coaching</h4>
+					<h4>Find Geeks</h4>
 					<div class="h4-underline"></div>
-					<p>Guide and mentor the students</p>
+					<p>The best hackers and geeks are in the Ease Community</p>
 				</div>
 				<div class="col-md-4 about-info about-info3">
 					<i class="fab fa-codepen"></i>
-					<h4>Inspire Students</h4>
+					<h4>Auto Screening</h4>
 					<div class="h4-underline"></div>
-					<p>Help students expand their views.</p>
+					<p>Auto Screening of Participant Resumes</p>
 				</div>
 			</div>
 			<div class="bord"></div>
-			<div class="row about-info-grids">
+			<!-- <div class="row about-info-grids">
 				<div class="col-md-4 about-info about-info1">
 					<i class="fas fa-university"></i>
 					<h4>Company</h4>
@@ -180,11 +180,11 @@
 				</div>
 				<div class="col-md-4 about-info about-info3">
 					<i class="fas fa-graduation-cap"></i>
-					<h4>Career</h4>
+					<h4></h4>
 					<div class="h4-underline"></div>
 					<p>Build your own career.</p>
 				</div>
-			</div>
+			</div> -->
 			<br>
 			<div class="row" style="text-align: center; padding-left: 32%">
 				<a href="/organizers/login">
