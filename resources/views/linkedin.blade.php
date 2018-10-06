@@ -4,16 +4,16 @@
 
 <section class="content">
     <div class="container-fluid">
-        <div class="block-header">
+       {{--  <div class="block-header">
             <h2>DASHBOARD</h2>
-        </div>
+        </div> --}}
         <div class="row clearfix">
             <!-- Task Info -->
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="card">
                         <div class="header">
                             <h2>
-                                Events in which you can register!
+                                Connect To Linkedin
                                 <small>Hackathons, Programming Challenges and Coding Competitions</small>
                             </h2>
                             <ul class="header-dropdown m-r--5">

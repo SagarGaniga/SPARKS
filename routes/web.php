@@ -25,7 +25,7 @@ Route::get('/session', 'NoauthController@accessSessionData');
 Auth::routes();
 Route::get('/userHome', 'HomeController@index');
 Route::get('/profile', 'HomeController@profile');
-Route::get('/userauth', 'HomeController@linkedin');
+Route::get('/userlinkedin', 'HomeController@linkedin');
 Route::get('/authlink', 'HomeController@authlink');
 Route::get('/user/home/2', 'HomeController@index');
 Route::get('/logoutuser','Auth\LoginController@logout');
