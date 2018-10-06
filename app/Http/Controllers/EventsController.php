@@ -14,6 +14,13 @@ use App\projectSkills;
 use App\Event_Domain;
 use App\Domain;
 use App\event_registration;
+// use App\events;
+use Redirect;
+use App\domains;
+use db;
+use App\eventdomains;
+use App\Organizers;
+use session;
 class EventsController extends Controller
 {
     public function registerForEvent(Request $request){
@@ -178,5 +185,201 @@ class EventsController extends Controller
             return 3;
         else
             return 1;
+    }
+    public function index()
+    {
+        return Redirect::to('/userHome');
+
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {   
+        $domains = domains::all();
+        return view('events.create')->with('domains',$domains);
+    
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {     
+
+       
+        
+        $this->validate($request,[
+             
+            'name'=>'required',   
+            'description'=>'required',
+            'domainselect'=>'required',
+            'cover_image'=> 'image|nullable|max:1999'  
+            ]);
+            
+    
+         
+           if($request->hasFile('cover_image'))
+           {
+              $fileNameWithExt =$request->file('cover_image')->getClientOriginalName();
+              $filename= pathinfo($fileNameWithExt, PATHINFO_FILENAME);
+              $extension=$request->file('cover_image')->getClientOriginalExtension();
+              $fileNameToStore=$filename.'_'.time().'.'.$extension;
+             $path=$request->file('cover_image')->storeAs('public/event_images',$fileNameToStore);
+             
+           }
+           else
+           {
+             $fileNameToStore = 'noimage.jpg';
+           }
+    
+            
+            $event=new events;
+            
+            $event->name = $request->input('name'); 
+            $event->description = $request->input('description');
+            
+            $event->organizer_id = session('id');
+            
+            $event->event_image=$fileNameToStore;
+            
+            $event->save();
+            
+            foreach($request->input('domainselect') as $domain){
+                {   $domain_id = domains::get()->where('name', '=', $domain)->pluck('id');
+                    $eventdomain=new eventdomains;
+                    $eventdomain->event_id = $event->id;
+                    $eventdomain->event_domain = $domain_id[0];
+                    $eventdomain->save();
+                }
+            }
+            return redirect('/events')->with('success','Event created successfully!!');
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        $event= events::find($id);
+        $organizer_name = Organizers::get()->where('id','=',$event->organizer_id)->pluck('name');
+        $organizer_id = session('id');
+       
+        // $eventdomains = eventdomains::get()-
+
+
+        return view('events.show')->with('event',$event)->with('organizer_name',$organizer_name)->with('organizer_id',$organizer_id);
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit($id)
+    {   
+        $event= events::find($id);
+        $domains = domains::all();
+        $eventdomains = eventdomains::where('event_id','=',$event->id)->pluck('event_domain');
+        
+        if(session('id') !== $event->organizer_id)
+        {  
+            return redirect('/events')->with('error','Unauthorized Page');
+        }
+        
+        return view('events.edit')->with('event',$event)->with('domains',$domains)->with('eventdomains',$eventdomains);
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $id)
+    { $this->validate($request,[
+             
+        'name'=>'required',   
+        'description'=>'required',
+        'domainselect'=>'required',
+        'cover_image'=> 'image|nullable|max:1999'  
+        ]);
+        
+
+     
+       if($request->hasFile('cover_image'))
+       {
+          $fileNameWithExt =$request->file('cover_image')->getClientOriginalName();
+          $filename= pathinfo($fileNameWithExt, PATHINFO_FILENAME);
+          $extension=$request->file('cover_image')->getClientOriginalExtension();
+          $fileNameToStore=$filename.'_'.time().'.'.$extension;
+         $path=$request->file('cover_image')->storeAs('public/event_images',$fileNameToStore);
+         
+       }
+      
+          
+            $event=events::find($id);
+
+
+            $event->name = $request->input('name'); 
+            $event->description = $request->input('description');
+            $event->organizer_id = session('id');
+            
+            if($request->hasFile('cover_image'))
+            {  Storage::delete('public/event_images/' . $event->event_image);
+              $event->event_image=$fileNameToStore;
+            }
+            
+            $event->save();
+    
+
+            foreach($request->input('domainselect') as $domain){
+                {   
+                    if(eventdomains::find($domain->id)){
+                    $domain_id = domains::get()->where('name', '=', $domain)->pluck('id');
+                    $eventdomain=eventdomains::find($domain->id);
+                    $eventdomain->event_id = $event->id;
+                    $eventdomain->event_domain = $domain_id[0];
+                    $eventdomain->save();
+                    }
+                    else{
+                    $domain_id = domains::get()->where('name', '=', $domain)->pluck('id');
+                    $eventdomain=new eventdomains;
+                    $eventdomain->event_id = $event->id;
+                    $eventdomain->event_domain = $domain_id[0];
+                    $eventdomain->save();
+                    }
+                }
+            }
+
+
+            return redirect('/events')->with('success','Event Data Updated Successfully');
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
+    {
+        //
+    }
+
+
+    public function participation(){
+        return view('events.participation');
     }
 }

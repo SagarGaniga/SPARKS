@@ -24,7 +24,9 @@ Route::get('/session', 'NoauthController@accessSessionData');
 
 Auth::routes();
 Route::get('/userHome', 'HomeController@index');
-
+Route::get('/profile', 'HomeController@profile');
+Route::get('/userlinkedin', 'HomeController@linkedin');
+Route::get('/authlink', 'HomeController@authlink');
 Route::get('/user/home/2', 'HomeController@index');
 Route::get('/logoutuser','Auth\LoginController@logout');
 
@@ -41,8 +43,9 @@ Route::group( [ 'prefix' => '/organizers'], function()
 	Route::get('/register', 'OrganizersAuth\RegisterController@showRegistrationForm');
 	Route::post('/register', 'OrganizersAuth\RegisterController@register');
 
-
-
 });
 
+Route::resource('events','EventsController');
+
 Route::post('/eventRegister', 'EventsController@registerForEvent');
+Route::get('/participation','EventsController@participation');

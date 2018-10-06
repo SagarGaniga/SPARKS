@@ -4,9 +4,9 @@
 
 <section class="content">
     <div class="container-fluid">
-        <div class="block-header">
+        {{-- <div class="block-header">
             <h2>DASHBOARD</h2>
-        </div>
+        </div> --}}
         <div class="row clearfix">
             <!-- Task Info -->
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -33,13 +33,14 @@
                             <div class="row">
                                 @foreach ($events as $event)
                                     <div class="col-sm-6 col-md-3">
+                                        <a href="/events/{{$event->id}}">"
                                         <div class="thumbnail">
-                                            <img src="http://placehold.it/500x300">
+                                            <img class="thumb" style="width:100%" src="/storage/event_images/{{$event->event_image}}">
                                             <div class="caption">
                                                 <h3>{{$event->name}}</h3>
                                                 <p>
                                                     {{$event->description}}
-                                                </p>
+                                                </p></a>
                                                 <p>
                                                     <?php $id = "#". $event->id?>
                                                     <!-- Trigger the modal with a button -->
