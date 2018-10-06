@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Events;
+use App\User;
+use Session;
+
 class HomeController extends Controller
 {
     /**
@@ -29,5 +32,13 @@ class HomeController extends Controller
         $events = Events::all();
         return view("home")->with("events", $events);
         // return view('home');
+    }
+
+    public function profile()
+    {
+        $user=User::where('id',Session::get('id'))->get();
+        // print_r($user);
+        // exit;
+        return view('profile')->with('user',$user);
     }
 }

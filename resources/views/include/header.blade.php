@@ -256,6 +256,18 @@
                             <span>DashBoard</span>
                         </a>
                     </li>
+                    <li class="active">
+                        <a href="/profile">
+                            <i class="material-icons">book</i>
+                            <span>Profile</span>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="/authuser">
+                            <i class="material-icons">link</i>
+                            <span>LinkedIn</span>
+                        </a>
+                    </li>
                    
                 </ul>
             </div>

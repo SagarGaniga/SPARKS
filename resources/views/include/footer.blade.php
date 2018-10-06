@@ -8,6 +8,8 @@
     <!-- Select Plugin Js -->
     <script src= "{{ URL::asset('../../plugins/bootstrap-select/js/bootstrap-select.js')}}" ></script>
 
+    <script src= "{{ URL::asset('../../plugins/sweetalert/sweetalert.min.js')}}" ></script>
+
     <!-- Slimscroll Plugin Js -->
     <script src= "{{ URL::asset('../../plugins/jquery-slimscroll/jquery.slimscroll.js')}}" ></script>
 
@@ -24,6 +26,9 @@
     <!-- ChartJs -->
     <script src= "{{ URL::asset('../../plugins/chartjs/Chart.bundle.js')}}" ></script>
 
+    <!-- JQuery Steps Plugin Js -->
+    <script src= "{{ URL::asset('"../../plugins/jquery-steps/jquery.steps.js')}}" ></script>
+
     <!-- Flot Charts Plugin Js -->
     <script src= "{{ URL::asset('../../plugins/flot-charts/jquery.flot.js')}}" ></script>
     <script src= "{{ URL::asset('../../plugins/flot-charts/jquery.flot.resize.js')}}" ></script>
@@ -37,6 +42,7 @@
     <!-- Custom Js -->
     <script src="{{ URL::asset('../../js/admin.js')}}" ></script>
     <script src="{{ URL::asset('../../js/pages/index.js')}}" ></script>
+    <script src="{{ URL::asset('../../js/pages/forms/form-wizard.js')}}"></script>
 
     <!-- Demo Js -->
     <script src="{{ URL::asset('../../js/demo.js')}}" ></script>
