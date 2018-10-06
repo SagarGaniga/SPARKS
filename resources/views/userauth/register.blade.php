@@ -1,11 +1,11 @@
 @include('include.authheader')
 <body class="signup-page">
     <div class="signup-box">
-        <div class="logo">
+        <div class="logo" style="width: 30vw">
             <a href="javascript:void(0);">Participant</a>
-            <small>Participae in Events</small>
+            <small>Participate in Events</small>
         </div>
-        <div class="card">
+        <div class="card" style="width: 30vw">
             <div class="body">
                 <form id="sign_up" method="POST" action="/register">
                 	@csrf
@@ -24,6 +24,46 @@
                         </span>
                         <div class="form-line">
                             <input type="email" class="form-control" name="email" placeholder="Email Address" required>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <i class="material-icons">person</i>
+                        </span>
+                        <div class="form-line">
+                            <input type="text" class="form-control" name="contact" placeholder="Contact Number" required autofocus>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <i class="material-icons">person</i>
+                        </span>
+                        <div class="form-line">
+                            <input type="text" class="form-control" name="college" placeholder="College" required autofocus>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <i class="material-icons">person</i>
+                        </span>
+                        <div class="form-line">
+                            <input type="text" class="form-control" name="linkedin" placeholder="LinkedIn profile link" required autofocus>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <i class="material-icons">person</i>
+                        </span>
+                        <div class="form-line">
+                            <input type="text" class="form-control" name="github" placeholder="Github profile link" required autofocus>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <i class="material-icons">person</i>
+                        </span>
+                        <div class="form-line">
+                            <input type="text" class="form-control" name="resume" placeholder="Resume link" required autofocus>
                         </div>
                     </div>
                     <div class="input-group">
