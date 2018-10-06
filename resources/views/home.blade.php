@@ -4,9 +4,9 @@
 
 <section class="content">
     <div class="container-fluid">
-        <div class="block-header">
+        {{-- <div class="block-header">
             <h2>DASHBOARD</h2>
-        </div>
+        </div> --}}
         <div class="row clearfix">
             <!-- Task Info -->
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -32,9 +32,9 @@
                         <div class="body">
                             <div class="row">
                                 @foreach ($events as $event)
-                                    <div class="col-sm-6 col-md-3">
+                                    <div class="col-sm-6 col-md-3" style="height: 320px;width: 300px;">
                                         <div class="thumbnail">
-                                            <img src="http://placehold.it/500x300">
+                                            <img src="http://my.kwic.com/~hnag/HNAG_files/events.jpg">
                                             <div class="caption">
                                                 <h3>{{$event->name}}</h3>
                                                 <p>

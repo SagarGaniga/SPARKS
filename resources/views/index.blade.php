@@ -7,7 +7,7 @@
 				<!-- Slideshow 3 -->
 				<ul class="rslides" id="slider" style="height: 130%">
 					<li>
-						<div class="agile_banner_text_info">
+						<div class="agile_banner_text_info" style="top: 220px;">
 							<h3>Event Automated Screening with Ease</h3>
 							<p>EASE provides a universal platform for participants and the event organizers to collaborate for various events together, by easing the job for both the parties</p>
 							<br>
@@ -16,7 +16,7 @@
 						</div>
 					</li>
 					<li>
-						<div class="agile_banner_text_info">
+						<div class="agile_banner_text_info"  style="top: 220px;">
 							<h3>Event Automated Screening with Ease</h3>
 							<p>EASE provides a universal platform for participants and the event organizers to collaborate for various events together, by easing the job for both the parties.</p>
 							<br>

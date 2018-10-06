@@ -9,7 +9,7 @@
             <div class="body">
                 <form id="sign_up" method="POST" action="/register">
                 	@csrf
-                    <div class="msg">Register as an organizer</div>
+                    <div class="msg">Register as a participant</div>
                     <div class="input-group">
                         <span class="input-group-addon">
                             <i class="material-icons">person</i>
@@ -28,7 +28,7 @@
                     </div>
                     <div class="input-group">
                         <span class="input-group-addon">
-                            <i class="material-icons">person</i>
+                            <i class="material-icons">phone</i>
                         </span>
                         <div class="form-line">
                             <input type="text" class="form-control" name="contact" placeholder="Contact Number" required autofocus>
@@ -36,7 +36,7 @@
                     </div>
                     <div class="input-group">
                         <span class="input-group-addon">
-                            <i class="material-icons">person</i>
+                            <i class="material-icons">home</i>
                         </span>
                         <div class="form-line">
                             <input type="text" class="form-control" name="college" placeholder="College" required autofocus>
@@ -44,7 +44,7 @@
                     </div>
                     <div class="input-group">
                         <span class="input-group-addon">
-                            <i class="material-icons">person</i>
+                            <i class="material-icons">link</i>
                         </span>
                         <div class="form-line">
                             <input type="text" class="form-control" name="linkedin" placeholder="LinkedIn profile link" required autofocus>
@@ -52,7 +52,7 @@
                     </div>
                     <div class="input-group">
                         <span class="input-group-addon">
-                            <i class="material-icons">person</i>
+                            <i class="material-icons">link</i>
                         </span>
                         <div class="form-line">
                             <input type="text" class="form-control" name="github" placeholder="Github profile link" required autofocus>
@@ -60,7 +60,7 @@
                     </div>
                     <div class="input-group">
                         <span class="input-group-addon">
-                            <i class="material-icons">person</i>
+                            <i class="material-icons">book</i>
                         </span>
                         <div class="form-line">
                             <input type="text" class="form-control" name="resume" placeholder="Resume link" required autofocus>
