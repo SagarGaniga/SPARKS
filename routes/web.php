@@ -30,6 +30,8 @@ Route::get('/authlink', 'HomeController@authlink');
 Route::get('/user/home/2', 'HomeController@index');
 Route::get('/logoutuser','Auth\LoginController@logout');
 
+Route::get('/getgithub', 'UsersController@getgithub');
+
 Route::get('/updateprojintern/{userid}', 'UsersController@updateInternProj');
 
 Route::group( [ 'prefix' => '/organizers'], function()
@@ -49,3 +51,9 @@ Route::resource('events','EventsController');
 
 Route::post('/eventRegister', 'EventsController@registerForEvent');
 Route::get('/participation','EventsController@participation');
+
+Route::get('/organizerHome', 'OrganizerController@index');
+
+
+
+Route::get('/events/{id}/participants','OrganizerController@viewParticipants');
