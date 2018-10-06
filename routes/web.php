@@ -43,8 +43,9 @@ Route::group( [ 'prefix' => '/organizers'], function()
 	Route::get('/register', 'OrganizersAuth\RegisterController@showRegistrationForm');
 	Route::post('/register', 'OrganizersAuth\RegisterController@register');
 
-
-
 });
 
+Route::resource('events','EventsController');
+
 Route::post('/eventRegister', 'EventsController@registerForEvent');
+Route::get('/participation','EventsController@participation');

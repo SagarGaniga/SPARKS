@@ -4,9 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class events extends Model
+class domains extends Model
 {
-    protected $table = "event";
+    protected $table = "domain";
     protected $primaryKey = "id";
-    public $timestamps = true;
+    public $timestamps = false;
 }
