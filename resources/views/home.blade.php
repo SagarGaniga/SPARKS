@@ -56,7 +56,7 @@
                                                         </div>
                                                         <div class="modal-body">
                                                             <p>
-                                                                <form id="register" method="POST" action="eventRegister">
+                                                                <form id="register" method="POST" action="/eventRegister">
                                                                     @csrf
                                                                     <input type="hidden" name="event_id" value="{{$event->id}}">
                                                                     <input type="text" name="skills">

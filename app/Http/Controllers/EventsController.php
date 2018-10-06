@@ -11,7 +11,7 @@ use App\Skills;
 use App\events;
 use App\projects;
 use App\projectSkills;
-use App\EventDomain;
+use App\Event_Domain;
 use App\Domain;
 class EventsController extends Controller
 {
@@ -67,22 +67,56 @@ class EventsController extends Controller
         }
 
         // Event related skills
+        $event_skill = array();
+
         $event_id = $request->event_id;
 
-        $event_domain = EventDomain::where("event_id", "=", $event_id)->first();
+        $event_domain = Event_Domain::where("event_id", "=", $event_id)->first();
 
-        $event_skills_get = Skills::where("domain_id", "=", $event_domain)->get();
+        $event_skills_get = Skills::where("domain_id", "=", $event_domain->event_domain)->get();
 
-        return $event_skills_get;
+        foreach($event_skills_get as $event_skills){
+            array_push($event_skill, $event_skills->name);   
+        }
+
+        $specific_skills = $request->skills;
+        
+        $specific_skills =  explode(",", $specific_skills);
+        
 
 
+        $skills = array([
+            "specific_skills" => $specific_skills,
+            "project_description" => $project_details,
+            "project_skills" => $project_skills,
+            "internship_skills" => $internship_skills,
+            "internship_description" => $internship_details,
+            "event_id" => $event_id,
+            "event_skills" => $event_skill
+        ]);
 
+        $score = $this->getScore($skills[0]);
+        return $score;
     }
 
 
     public function getScore($skills){
 
         // Complete this
+        $skill_set = $skills["event_skills"];
+
+        $total_score = 0;
+
+        //  call for specific_skills
+        $total_score = $total_score + $this->utility($skills["specific_skills"], $skill_set);
+
+        // call for project_description
+        $total_score = $total_score + $this->utility($skills["project_description"], $skill_set);
+
+        // call for project_skills
+        $total_score = $total_score + $this->utility($skills["project_skills"], $skill_set);
+        
+
 
     }
 }
