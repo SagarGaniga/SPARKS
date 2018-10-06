@@ -48,6 +48,10 @@
                                         <tr>
                                             <td>Total Count</td>
                                             <td>$320,800</td>
+                                            <td>$320,800</td>
+                                            <td>$320,800</td>
+                                            <td>$320,800</td>
+                                            <td>$320,800</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -76,8 +80,7 @@
     <script src="plugins/node-waves/waves.js"></script>
 
     <!-- Jquery DataTable Plugin Js -->
-    <script src="{{URL::asset('plugins/jquery-datatable/jquery.dataTables.js')}}"></script>
-    <script src="{{URL::asset('plugins/jquery-datatable/skin/bootstrap/js/dataTables.bootstrap.js')}}"></script>
+    
     <!--<script src="plugins/jquery-datatable/extensions/export/dataTables.buttons.min.js"></script>
     <script src="plugins/jquery-datatable/extensions/export/buttons.flash.min.js"></script>
     <script src="plugins/jquery-datatable/extensions/export/jszip.min.js"></script>

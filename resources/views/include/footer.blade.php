@@ -49,7 +49,8 @@
 
     <script src="{{ URL::asset('../../js/typeahead.js')}}" ></script>
 
-    
+    <script src="{{URL::asset('plugins/jquery-datatable/jquery.dataTables.js')}}"></script>
+    <script src="{{URL::asset('plugins/jquery-datatable/skin/bootstrap/js/dataTables.bootstrap.js')}}"></script>
 </body>
 
 </html>
