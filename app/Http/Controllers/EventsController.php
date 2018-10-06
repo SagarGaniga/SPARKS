@@ -114,9 +114,13 @@ class EventsController extends Controller
         
         return redirect("userHome");
 
-
     }
 
+    public function ranking($id){
+        $participants = event_registration::where("event_id", "=", $id)->orderBy("score", "DESC")->get();
+        return $participants;
+
+    }
 
     public function getScore($skills){
         // print_r($skills);

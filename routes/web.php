@@ -28,9 +28,12 @@ Route::get('/profile', 'HomeController@profile');
 Route::get('/userlinkedin', 'HomeController@linkedin');
 Route::get('/authlink', 'HomeController@authlink');
 Route::get('/user/home/2', 'HomeController@index');
+
 Route::get('/logoutuser','Auth\LoginController@logout');
 
 Route::get('/updateprojintern/{userid}', 'UsersController@updateInternProj');
+
+Route::get('/ranking/{event_id}', 'EventsController@ranking');
 
 Route::group( [ 'prefix' => '/organizers'], function()
 {
