@@ -263,7 +263,7 @@
                         </a>
                     </li>
                     <li class="active">
-                        <a href="/authuser">
+                        <a href="/userauth">
                             <i class="material-icons">link</i>
                             <span>LinkedIn</span>
                         </a>
