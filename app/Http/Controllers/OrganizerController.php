@@ -75,7 +75,7 @@ class OrganizerController extends Controller
 
     public function viewParticipants($id)
     {
-        return $id;
+        return view('organizers.event');
     }
 
 }
