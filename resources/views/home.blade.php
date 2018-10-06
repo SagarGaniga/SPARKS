@@ -32,14 +32,15 @@
                         <div class="body">
                             <div class="row">
                                 @foreach ($events as $event)
-                                    <div class="col-sm-6 col-md-3" style="height: 320px;width: 300px;">
+                                    <div class="col-sm-6 col-md-3">
+                                        <a href="/events/{{$event->id}}">"
                                         <div class="thumbnail">
-                                            <img src="http://my.kwic.com/~hnag/HNAG_files/events.jpg">
+                                            <img class="thumb" style="width:100%" src="/storage/event_images/{{$event->event_image}}">
                                             <div class="caption">
                                                 <h3>{{$event->name}}</h3>
                                                 <p>
                                                     {{$event->description}}
-                                                </p>
+                                                </p></a>
                                                 <p>
                                                     <!-- Trigger the modal with a button -->
                                                     <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
