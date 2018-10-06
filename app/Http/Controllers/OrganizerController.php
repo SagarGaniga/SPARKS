@@ -8,7 +8,7 @@ use App\Events;
 use App\User;
 use Session;
 
-class HomeController extends Controller
+class OrganizerController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -28,9 +28,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        // echo "string";
-        $events = Events::all();
-        return view("home")->with("events", $events);
+        
+        $events = Events::where('organizer_id','=',session('id'))->get();
+        return view("organizersHome")->with("events", $events);
         // return view('home');
     }
 
@@ -56,30 +56,26 @@ class HomeController extends Controller
              //we know that the user is authenticated now. Start query the API
 
              $user=LinkedIn::get('v1/people/~:(id,firstName,headline,current-share,public-profile-url,num-connections,picture-url,summary,specialties,positions,location,industry)');
-             // echo "<pre>";
-             $send=[];
-             $send['name']=$user['firstName'];
-             $send['connections']=$user['numConnections'];
-             $send['location']=$user['location']['name'];
-             $send['positions']=$user['positions'];
-             $send['summary']=$user['summary'];
-
-             return view("linkedin")->with('user',$send);
-             // print_r($send);
-             // exit();
-        } elseif (LinkedIn::hasError()) {
+             echo "<pre>";
+             // return view("linkedin")->with('user',$user);
+             print_r($user);
+             exit();
+        }elseif (LinkedIn::hasError()) {
              echo  "User canceled the login.";
              exit();
-        }else
-        {
-            $url = LinkedIn::getLoginUrl();
-            return redirect($url);
         }
-       
 
         //if not authenticated
-        // $url = LinkedIn::getLoginUrl();
-        // echo "<div class='container'><a href='$url'><button type='primary'>Login with LinkedIn</a></button></div>";
-        // exit();
+        $url = LinkedIn::getLoginUrl();
+        echo "<div class='container'><a href='$url'>Login with LinkedIn</a></div>";
+        exit();
     }
+
+
+
+    public function viewParticipants($id)
+    {
+        return view('organizers.event');
+    }
+
 }
