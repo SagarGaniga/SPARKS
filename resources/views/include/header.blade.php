@@ -268,6 +268,12 @@
                             <span>LinkedIn</span>
                         </a>
                     </li>
+                    <li class="active">
+                        <a href="/getgithub">
+                            <i class="material-icons">link</i>
+                            <span>Github</span>
+                        </a>
+                    </li>
                    
                 </ul>
             </div>

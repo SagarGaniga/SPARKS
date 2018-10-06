@@ -29,6 +29,8 @@ Route::get('/authlink', 'HomeController@authlink');
 Route::get('/user/home/2', 'HomeController@index');
 Route::get('/logoutuser','Auth\LoginController@logout');
 
+Route::get('/getgithub', 'UsersController@getgithub');
+
 Route::get('/updateprojintern/{userid}', 'UsersController@updateInternProj');
 
 Route::group( [ 'prefix' => '/organizers'], function()
