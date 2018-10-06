@@ -13,7 +13,6 @@ use App\projects;
 use App\projectSkills;
 use App\Event_Domain;
 use App\Domain;
-use App\events;
 use Redirect;
 use App\domains;
 use db;
