@@ -40,7 +40,10 @@ class UsersController extends Controller
         } else {
             $data = json_decode($response);
         }
-
-        return(view('users.temp')->with('data', $data));
+        echo "<pre>";
+        print_r($data);
+        exit;
+        // $array = json_decode($data, true); 
+        // return view('github')->with('user', $data);
     }
 }

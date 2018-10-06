@@ -95,7 +95,7 @@
                                             </div>
                                             <div class="form-group form-float">
                                                 <div class="form-line">
-                                                    <textarea rows="4" class="form-control no-resize"  name="phone" value=""  aria-required="true" readonly>@if(!empty($data2['summary']))
+                                                    <textarea rows="4" class="form-control no-resize"  name="phone" style="text-align: left;" value=""  aria-required="true" readonly>@if(!empty($data2['summary']))
                                                        {{$data2['summary']}}
                                                     @endif
                                             </textarea>
