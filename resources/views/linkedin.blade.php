@@ -31,13 +31,94 @@
                         </div>
                         <div class="body">
                             <div class="row">
-                                <a href="/authlink">
-                               <button class="btn btn-info btn-lg" style="border-radius: 50px;width: 200px;">Connect Linkedin</button></a> 
-                                </a>
+                               @if(!empty($user['name']))
+                               <div class='container-fluid'>
+                                   <form id="wizard_with_validation" method="POST">
+                                        <h3 style="color: red">Linkedin Basic Information</h3>
+                                        <fieldset>
+                                            <div class="form-group form-float">
+                                                <div class="form-line">
+                                                     <input type="text" class="form-control" name="username"  aria-required="true" value ="{{$user['name']}}" readonly="true">
+                                                    <label class="form-label">Username</label>
+                                                </div>
+                                            </div>
+                                            <div class="form-group form-float">
+                                                <div class="form-line">
+                                                    <input type="text" class="form-control" name="email" value="{{$user['connections']}}"  aria-required="true" readonly>
+                                                    <label class="form-label">Connections</label>
+                                                </div>
+                                            </div>
+                                            <div class="form-group form-float">
+                                                <div class="form-line">
+                                                    <input type="text" class="form-control" name="phone" value="{{$user['location']}}"  aria-required="true" readonly>
+                                                    <label class="form-label">Location</label>
+                                                </div>
+                                            </div>
+                                            <div class="form-group form-float">
+                                                <div class="form-line">
+                                                    <textarea rows="4" class="form-control no-resize"  name="phone" value=""  aria-required="true" readonly>{{$user['summary']}}</textarea>
+                                                    <label class="form-label">Summary</label>
+                                                </div>
+                                            </div>
+                                        </fieldset>
+
+                                        <h3 style="color: red">Experience</h3>
+                                        
+                                        @foreach($user['positions']['values'] as $data2)
+                                        {{-- hello --}}
+                                        
+                                         
+                                       
+                                       {{-- <div class='container-fluid'> --}}
+                                       <fieldset>
+                                            <div class="form-group form-float">
+                                                <div class="form-line">
+                                                    <input type="text" name="name" class="form-control" 
+                                                    @if(!empty($data2['company']['name']))
+                                                        value="{!!$data2['company']['name']!!}"
+                                                    @endif
+                                                            
+                                                    aria-required="true" readonly>
+                                                    <label class="form-label">Organization</label>
+                                                </div>
+                                            </div>
+                                            <div class="form-group form-float">
+                                                <div class="form-line">
+                                                    <input type="text" name="name" class="form-control" 
+                                                    @if(!empty($data2['company']['industry']))
+                                                        value="{!!$data2['company']['industry']!!}"
+                                                    @endif
+
+                                                    aria-required="true" readonly>
+                                                    <label class="form-label">Company</label>
+                                                </div>
+                                            </div>
+                                            <div class="form-group form-float">
+                                                <div class="form-line">
+                                                    <textarea rows="4" class="form-control no-resize"  name="phone" value=""  aria-required="true" readonly>@if(!empty($data2['summary']))
+                                                       {{$data2['summary']}}
+                                                    @endif
+                                            </textarea>
+                                                    <label class="form-label">Summary</label>
+                                                </div>
+                                            </div>
+                                            
+                                        </fieldset>
+
+                                        {{-- </div> --}}
+                                        @endforeach
+                                    </form> 
+                                </div>
+                                @else
+                                    <a href="/authlink">
+                                   <button class="btn btn-info btn-lg" style="border-radius: 50px;width: 200px;text-align: center;">Connect Linkedin</button></a> 
+                                    </a>
+                                @endif
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
             </div>
             <!-- #END# Task Info -->
             
