@@ -49,3 +49,9 @@ Route::resource('events','EventsController');
 
 Route::post('/eventRegister', 'EventsController@registerForEvent');
 Route::get('/participation','EventsController@participation');
+
+Route::get('/organizerHome', 'OrganizerController@index');
+
+
+
+Route::get('/events/{id}/participants','OrganizerController@viewParticipants');
