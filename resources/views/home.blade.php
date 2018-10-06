@@ -42,17 +42,18 @@
                                                     {{$event->description}}
                                                 </p></a>
                                                 <p>
+                                                    <?php $id = "#". $event->id?>
                                                     <!-- Trigger the modal with a button -->
-                                                    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+                                                    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="{{$id}}">Open Modal</button>
 
                                                     <!-- Modal -->
-                                                    <div class="modal fade" id="myModal" role="dialog">
+                                                    <div class="modal fade" id="{{$event->id}}" role="dialog">
                                                     <div class="modal-dialog">
                                                     
                                                         <!-- Modal content-->
                                                         <div class="modal-content">
                                                         <div class="modal-header">
-                                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                            <button type="button" class="close" data-dismiss="{{$event->id}}" name="{{$event->id}}">&times;</button>
                                                             <h4 class="modal-title">{{$event->name}}</h4>
                                                         </div>
                                                         <div class="modal-body">
