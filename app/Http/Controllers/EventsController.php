@@ -13,6 +13,7 @@ use App\projects;
 use App\projectSkills;
 use App\Event_Domain;
 use App\Domain;
+use App\event_registration;
 class EventsController extends Controller
 {
     public function registerForEvent(Request $request){
@@ -30,7 +31,7 @@ class EventsController extends Controller
         $internships = internships::where("user_id", "=", $user_id)->get();
         
         foreach($internships as $intern){
-            $internship_details = $internship_details." ".$intern->Description;
+            $internship_details = $internship_details.", ".$intern->Description;
             $internship_id = $intern->id;
             $skills = internshipSkills::where("internship_id", "=", $internship_id)->get();
             // return $skills;
@@ -52,7 +53,7 @@ class EventsController extends Controller
         $project_skills = array();
 
         foreach($projects as $proj){
-            $project_details = $project_details." ".$proj->details;
+            $project_details = $project_details.", ".$proj->details;
             $project_id = $proj->id;
             $skills = projectSkills::where("project_id", "=", $project_id)->get();
             // return $skills;
@@ -87,36 +88,95 @@ class EventsController extends Controller
 
         $skills = array([
             "specific_skills" => $specific_skills,
-            "project_description" => $project_details,
+            "project_description" => explode(",", $project_details),
             "project_skills" => $project_skills,
             "internship_skills" => $internship_skills,
-            "internship_description" => $internship_details,
+            "internship_description" => explode(",", $internship_details),
             "event_id" => $event_id,
             "event_skills" => $event_skill
         ]);
 
         $score = $this->getScore($skills[0]);
-        return $score;
+        // return $score;
+
+        $obj = new event_registration();
+        $obj->user_id = $user_id;
+        $obj->event_id = $event_id;
+        $obj->score = $score;
+        $obj->save();
+        
+        return redirect("userHome");
+
+
     }
 
 
     public function getScore($skills){
+        // print_r($skills);
 
         // Complete this
-        $skill_set = $skills["event_skills"];
-
+        $skill_set_temp = $skills["event_skills"];
+        $skill_set  = array();
+        foreach($skill_set_temp as $gg){
+            array_push($skill_set, trim($gg));
+        }
+        // return ($skill_set);
         $total_score = 0;
 
         //  call for specific_skills
-        $total_score = $total_score + $this->utility($skills["specific_skills"], $skill_set);
-
-        // call for project_description
-        $total_score = $total_score + $this->utility($skills["project_description"], $skill_set);
-
-        // call for project_skills
-        $total_score = $total_score + $this->utility($skills["project_skills"], $skill_set);
+        // return $skills["specific_skills"];
+        // return $skill_set;
+        $gg = $this->utility($skills["specific_skills"], $skill_set);
+        $total_score = $total_score + $gg;
         
 
+        // // call for project_description
+        $gg = $this->utility($skills["project_description"], $skill_set);
+        $total_score = $total_score + $gg;
+        
+        // // call for project_skills
+        $gg = $this->utility($skills["project_skills"], $skill_set);
+        $total_score = $total_score + $gg;
+        
+        // // # call for internship_skills
+        $total_score = $total_score + $this->utility($skills["internship_skills"], $skill_set);
 
+        // // call for internship_description
+        $total_score = $total_score + $this->utility($skills["internship_description"], $skill_set);
+        
+        
+        return ($total_score/15)*100;
+        
+    }
+
+
+    public function utility($user_skills_temp, $required_skill_set){
+
+        $user_skills  = array();
+        foreach($user_skills_temp as $gg){
+            array_push($user_skills, trim($gg));
+        }
+                
+        // return $user_skills;
+        $score = 0;
+        foreach($required_skill_set as $skill){
+            if(in_array(trim($skill), $user_skills)){
+                $score = $score+1;
+
+            }
+            // echo "\n";
+            // echo "<pre>";
+            // print_r($skill);
+
+            // print_r($user_skills);
+            // // print()
+            // echo "\n";
+                
+        }   
+        
+        if($score >= 2)
+            return 3;
+        else
+            return 1;
     }
 }
