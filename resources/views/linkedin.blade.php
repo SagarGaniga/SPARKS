@@ -14,7 +14,7 @@
                         <div class="header">
                             <h2>
                                 Connect To Linkedin
-                                <small>Hackathons, Programming Challenges and Coding Competitions</small>
+                                {{-- <small>Hackathons, Programming Challenges and Coding Competitions</small> --}}
                             </h2>
                             <ul class="header-dropdown m-r--5">
                                 <li class="dropdown">

@@ -67,7 +67,7 @@ class HomeController extends Controller
 
         //if not authenticated
         $url = LinkedIn::getLoginUrl();
-        echo "<a href='$url'>Login with LinkedIn</a>";
+        echo "<div class='container'><a href='$url'>Login with LinkedIn</a></div>";
         exit();
     }
 }
