@@ -41,7 +41,39 @@
                                                     {{$event->description}}
                                                 </p>
                                                 <p>
-                                                    <a href="javascript:void(0);" class="btn btn-primary waves-effect" role="button">Register</a>
+                                                    <!-- Trigger the modal with a button -->
+                                                    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+
+                                                    <!-- Modal -->
+                                                    <div class="modal fade" id="myModal" role="dialog">
+                                                    <div class="modal-dialog">
+                                                    
+                                                        <!-- Modal content-->
+                                                        <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                            <h4 class="modal-title">{{$event->name}}</h4>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <p>
+                                                                <form id="register" method="POST" action="eventRegister">
+                                                                    @csrf
+                                                                    <input type="hidden" name="event_id" value="{{$event->id}}">
+                                                                    <input type="text" name="skills">
+                                                                    <br>
+                                                                    <br>  
+                                                                    <input type="submit" class="btn btn-primary" value="Register">
+                                                                </form>
+                                                            </p>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                        </div>
+                                                        </div>
+                                                        
+                                                        </div>
+                                                    </div>
+                                                    
                                                 </p>
                                             </div>
                                         </div>

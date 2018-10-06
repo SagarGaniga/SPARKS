@@ -40,6 +40,10 @@
 
     <!-- Demo Js -->
     <script src="{{ URL::asset('../../js/demo.js')}}" ></script>
+
+    <script src="{{ URL::asset('../../js/typeahead.js')}}" ></script>
+
+    
 </body>
 
 </html>
