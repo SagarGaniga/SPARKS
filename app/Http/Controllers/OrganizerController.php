@@ -7,7 +7,7 @@ use LinkedIn;
 use App\Events;
 use App\User;
 use Session;
-
+use App\event_registration;
 class OrganizerController extends Controller
 {
     /**
@@ -75,7 +75,20 @@ class OrganizerController extends Controller
 
     public function viewParticipants($id)
     {
-        return view('organizers.event');
+
+        $participants = event_registration::where("event_id", "=", $id)->orderBy("score", "DESC")->get();
+        $users = User::all();
+
+
+        // $parti = $participants->map(function($participants){
+        //     $user_name = User::where('id',$participants->user_id)->pluck('name');
+        //     return collect($participants)->merge($user_name);
+        // });
+        
+        
+        return $parti;
+
+        return view('organizers.event')->with('participants',$participants)->with('users',$users);
     }
 
 }
